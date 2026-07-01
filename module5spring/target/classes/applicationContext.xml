@@ -1,0 +1,49 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="greetingService"
+          class="com.cognizant.GreetingService"/>
+
+</beans> -->
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="messageService"
+          class="com.cognizant.MessageService"/>
+
+    <bean id="client"
+          class="com.cognizant.Client">
+
+        <property
+            name="messageService"
+            ref="messageService"/>
+
+    </bean>
+
+</beans> -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student"
+          class="com.cognizant.Student">
+
+        <constructor-arg value="Premika"/>
+
+    </bean>
+
+</beans>

@@ -1,0 +1,25 @@
+package com.cognizant;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InOrder;
+
+import static org.mockito.Mockito.*;
+
+public class InteractionOrderTest {
+
+    @Test
+    void testInteractionOrder() {
+
+        ExternalApi mockApi = mock(ExternalApi.class);
+
+        mockApi.getData();
+        mockApi.getData();
+
+        InOrder inOrder = inOrder(mockApi);
+
+        inOrder.verify(mockApi, times(1)).getData();
+        inOrder.verify(mockApi, times(1)).getData();
+
+        verifyNoMoreInteractions(mockApi);
+    }
+}
